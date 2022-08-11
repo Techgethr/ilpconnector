@@ -20,8 +20,8 @@ module.exports = convertUsdTo => {
     options: {
       role: 'server',
       port: 7444,
-      ethereumPrivateKey: 'df24682c5c899eabdd2cf273729f374028e955868c08853df320a732fdf8a7f7',
-      ethereumProvider: 'kovan',
+      ethereumPrivateKey: process.env.ETHEREUM_PRIVATEKEY,
+      ethereumProvider: process.env.ETHEREUM_PROVIDER,
       getGasPrice: process.env.CONNECTOR_ENV === 'production' && getGasPrice,
       outgoingChannelAmount,
       /**

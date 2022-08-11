@@ -18,8 +18,8 @@ module.exports = convertUsdTo => {
       role: 'server',
       port: 7443,
       //secret:"XRPPeerPayGYHTAN.45",
-      xrpSecret: 'snWsti5geVgt4QZMjpwTWWqAZGnDJ',
-      xrpServer:'wss://s.altnet.rippletest.net:51233',
+      xrpSecret: process.env.XRP_SECRET,
+      xrpServer:process.env.XRP_SERVER,
       outgoingChannelAmount,
       minIncomingChannelAmount: 0,
       // Use plugin maxPacketAmount (and not connector middleware) so F08s occur *before* T04s
