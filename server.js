@@ -7,6 +7,8 @@ const {
 const { parse, resolve } = require('path')
 const chokidar = require('chokidar')
 
+require('dotenv').config()
+
 async function run() {
   const rateBackend = await connectCoinCap()
 
